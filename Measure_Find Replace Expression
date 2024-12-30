@@ -1,4 +1,4 @@
-
+//2 scripts. The first modifies only SELECTED measures while the second modifies ALL measures in the model
 
 //Modifies SELECTED measures
 var FromString = "From";
