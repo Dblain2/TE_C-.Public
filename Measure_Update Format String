@@ -1,0 +1,19 @@
+// Searches measures that contain "FindName" and updates format string.
+// Change 'm.FormatString' to a different property if you want to modify a different property of the measure.
+
+//This script searches for any measure name that includes "%" and formats the measure accordingly.
+var FindName = "%";
+var FormatNew1 = "#,##0.0%;(#,##0.0%)";  // Format for percentage
+var FormatNew2 = "$#,##0.00;($#,##0.00)"; // Format for currency
+
+foreach (var m in Model.AllMeasures)
+{
+    if (m.Name.Contains(FindName))
+    {
+        m.FormatString = FormatNew1; // Apply percentage format
+    }
+    else
+    {
+        m.FormatString = FormatNew2; // Apply currency format
+    }
+}
