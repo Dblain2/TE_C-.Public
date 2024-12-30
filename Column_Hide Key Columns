@@ -1,0 +1,14 @@
+//Searches measure that conatin "FindName" and updates properties
+
+//This code hids and folders all columns that columns that contain "key"
+var FindName = "key";
+var FolderName = "Keys";
+var IsHidden = true;
+foreach (var c in Model.AllColumns)
+    {
+    if( c.Name.Contains(FindName) )
+    {
+        c.DisplayFolder = FolderName;
+        c.IsHidden = IsHidden;
+    }
+    }
