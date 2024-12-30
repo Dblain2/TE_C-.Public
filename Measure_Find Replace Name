@@ -1,0 +1,21 @@
+//2 scripts. The first modifies only SELECTED measures while the second modifies ALL measures in the model
+
+//Modify SELECTED measures
+var FromString = "From";
+var ToString = "To";
+foreach (var m in Selected.Measures)
+    {
+        m.Name = m.Name.Replace(FromString,ToString);
+        /* Cycle over all measures in model and replaces the 
+           FromString with the ToString in the measure names*/
+    }
+
+//Modify ALL measures
+var FromString = "From";
+var ToString = "To";
+foreach (var m in Model.AllMeasures)
+    {
+        m.Name = m.Name.Replace(FromString,ToString);
+        /* Cycle over all measures in model and replaces the 
+           FromString with the ToString in the measure names*/
+    }
