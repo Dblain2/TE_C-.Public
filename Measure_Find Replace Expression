@@ -1,0 +1,21 @@
+
+
+//Modifies SELECTED measures
+var FromString = "From";
+var ToString = "To";
+foreach (var m in Selected.Measures)
+    {
+        m.Expression = m.Expression.Replace(FromString,ToString);
+        /* Cycle over all measures in model and replaces the 
+           FromString with the ToString */
+    }
+
+//Modifies ALL measures
+var FromString = "From";
+var ToString = "To";
+foreach (var m in Model.AllMeasures)
+    {
+        m.Expression = m.Expression.Replace(FromString,ToString);
+        /* Cycle over all measures in model and replaces the 
+           FromString with the ToString */
+    }
